@@ -9,7 +9,11 @@ function clock () {
     const now = new Date();
     //console.log("end =  ", end, "now = ", now);
     const currentTimeDifferenceInDays = (end - now)/1000;
-    console.log(currentTimeDifferenceInDays);
+    //console.log(currentTimeDifferenceInDays);
+
+    if ( currentTimeDifferenceInDays < 0 ) return;
+
+
     inputs[0].value = Math.floor(currentTimeDifferenceInDays/60/60/24/30.4375/12/100);
     inputs[1].value = Math.floor((currentTimeDifferenceInDays/60/60/24/30.4375/12)%100);
     inputs[2].value = Math.floor((currentTimeDifferenceInDays/60/60/24/30.4375)%12);
@@ -18,4 +22,11 @@ function clock () {
 }
 
 clock();
+
+setInterval (
+    () => {
+        clock()
+    },
+    1000*60
+)
 
