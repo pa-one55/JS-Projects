@@ -1,13 +1,1 @@
-const generateGrad = () => {
-    const color1  = Math.floor(Math.random() * (maxDecimal - minDecimal)) + minDecimal;
-    const hexCode1 = "#" + color1.toString(16);
-    const color2  = Math.floor(Math.random() * (maxDecimal - minDecimal)) + minDecimal;
-    const hexCode2 = "#" + color2.toString(16);
-    document.body.style.backgroundColor = hexCode1;
-    document.getElementById("hex-code").innerText = hexCode1;
-}
-
-document.getElementById("btn2").addEventListener(
-    "click",
-    generateGrad
-)
+lolo
